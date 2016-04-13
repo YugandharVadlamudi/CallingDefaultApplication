@@ -3,6 +3,7 @@ package com.example.kiran.callingdefaultapplication;
 import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,7 +37,11 @@ Button button1,button2,button3,button4;
                 startActivity(intent);
                 break;
             case R.id.button2:
-                intent=new Intent(Intent.ACTION_DIAL);
+                /*
+                * Intent take 2 parameters Action to be performed
+                * 2 data for that action to perform
+                * */
+                intent=new Intent(Intent.ACTION_DIAL, Uri.parse("tel:1234567890"));
                 startActivity(intent);
                 break;
             case R.id.button3:
